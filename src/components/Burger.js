@@ -73,6 +73,39 @@ export default class Burger extends Component {
             burger.push(<p key="0">Please start adding ingredients!</p>);
         return burger;
     }
+    render(){
+        return (
+            <>
+                <div className="burgerIngredients">
+                    <div className="topSide"></div>
+                    {this.burgerContent()}
+                    <div className="bottomSide"></div>
+                </div>
+                <div className="ingredientsBlock">
+                    <p>Lettuce</p>
+                    <div className="ingrBtns">
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('add','lettuce')}>Add</button>
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('remove','lettuce')}>Remove</button>
+                    </div>
+                    <p>TOMATO</p>
+                    <div className="ingrBtns">
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('add','tomato')}>Add</button>
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('remove','tomato')}>Remove</button>
+                    </div>
+                    <p>CHEESE</p>
+                    <div className="ingrBtns">
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('add','cheese')}>Add</button>
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('remove','cheese')}>Remove</button>
+                    </div>
+                    <p>MEAT</p>
+                    <div className="ingrBtns">
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('add','meat')}>Add</button>
+                        <button className="ingrBtn" onClick={() => this.addRemoveIngredient('remove','meat')}>Remove</button>
+                    </div>
+                </div>
+            </>
+        );
+    }
 
 
 
