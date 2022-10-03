@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './BurgerStyle.css';
 
 export default class Burger extends Component {
     state = {
